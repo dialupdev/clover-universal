@@ -7,66 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AACAE9721EDF3DAF00065D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9711EDF3DAF00065D9F /* AppDelegate.swift */; };
-		AACAE9741EDF3DB000065D9F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9731EDF3DB000065D9F /* MasterViewController.swift */; };
-		AACAE9761EDF3DB000065D9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9751EDF3DB000065D9F /* DetailViewController.swift */; };
-		AACAE9791EDF3DB000065D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9771EDF3DB000065D9F /* Main.storyboard */; };
-		AACAE97B1EDF3DB000065D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACAE97A1EDF3DB000065D9F /* Assets.xcassets */; };
-		AACAE97E1EDF3DB000065D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE97C1EDF3DB000065D9F /* LaunchScreen.storyboard */; };
-		AACAE9891EDF3DB000065D9F /* LidoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9881EDF3DB000065D9F /* LidoTests.swift */; };
-		AACAE9941EDF3DB000065D9F /* LidoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9931EDF3DB000065D9F /* LidoUITests.swift */; };
+		AACAE9AE1EDF428D00065D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9AD1EDF428D00065D9F /* AppDelegate.swift */; };
+		AACAE9B01EDF428D00065D9F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9AF1EDF428D00065D9F /* MasterViewController.swift */; };
+		AACAE9B21EDF428D00065D9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAE9B11EDF428D00065D9F /* DetailViewController.swift */; };
+		AACAE9B51EDF428D00065D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B31EDF428D00065D9F /* Main.storyboard */; };
+		AACAE9B71EDF428D00065D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B61EDF428D00065D9F /* Assets.xcassets */; };
+		AACAE9BA1EDF428D00065D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AACAE9851EDF3DB000065D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AACAE9661EDF3DAF00065D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AACAE96D1EDF3DAF00065D9F;
-			remoteInfo = Lido;
-		};
-		AACAE9901EDF3DB000065D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AACAE9661EDF3DAF00065D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AACAE96D1EDF3DAF00065D9F;
-			remoteInfo = Lido;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		AACAE96E1EDF3DAF00065D9F /* Lido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lido.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACAE9711EDF3DAF00065D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AACAE9731EDF3DB000065D9F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		AACAE9751EDF3DB000065D9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		AACAE9781EDF3DB000065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AACAE97A1EDF3DB000065D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AACAE97D1EDF3DB000065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AACAE97F1EDF3DB000065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AACAE9841EDF3DB000065D9F /* LidoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACAE9881EDF3DB000065D9F /* LidoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LidoTests.swift; sourceTree = "<group>"; };
-		AACAE98A1EDF3DB000065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AACAE98F1EDF3DB000065D9F /* LidoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACAE9931EDF3DB000065D9F /* LidoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LidoUITests.swift; sourceTree = "<group>"; };
-		AACAE9951EDF3DB000065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AACAE9AA1EDF428D00065D9F /* Lido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lido.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AACAE9AD1EDF428D00065D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AACAE9AF1EDF428D00065D9F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AACAE9B11EDF428D00065D9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AACAE9B41EDF428D00065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AACAE9B61EDF428D00065D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AACAE9B91EDF428D00065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AACAE9BB1EDF428D00065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AACAE96B1EDF3DAF00065D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE9811EDF3DB000065D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE98C1EDF3DB000065D9F /* Frameworks */ = {
+		AACAE9A71EDF428D00065D9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,68 +37,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AACAE9651EDF3DAF00065D9F = {
+		AACAE9A11EDF428D00065D9F = {
 			isa = PBXGroup;
 			children = (
-				AACAE9701EDF3DAF00065D9F /* Lido */,
-				AACAE9871EDF3DB000065D9F /* LidoTests */,
-				AACAE9921EDF3DB000065D9F /* LidoUITests */,
-				AACAE96F1EDF3DAF00065D9F /* Products */,
+				AACAE9AC1EDF428D00065D9F /* Lido */,
+				AACAE9AB1EDF428D00065D9F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AACAE96F1EDF3DAF00065D9F /* Products */ = {
+		AACAE9AB1EDF428D00065D9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AACAE96E1EDF3DAF00065D9F /* Lido.app */,
-				AACAE9841EDF3DB000065D9F /* LidoTests.xctest */,
-				AACAE98F1EDF3DB000065D9F /* LidoUITests.xctest */,
+				AACAE9AA1EDF428D00065D9F /* Lido.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AACAE9701EDF3DAF00065D9F /* Lido */ = {
+		AACAE9AC1EDF428D00065D9F /* Lido */ = {
 			isa = PBXGroup;
 			children = (
-				AACAE9711EDF3DAF00065D9F /* AppDelegate.swift */,
-				AACAE9731EDF3DB000065D9F /* MasterViewController.swift */,
-				AACAE9751EDF3DB000065D9F /* DetailViewController.swift */,
-				AACAE9771EDF3DB000065D9F /* Main.storyboard */,
-				AACAE97A1EDF3DB000065D9F /* Assets.xcassets */,
-				AACAE97C1EDF3DB000065D9F /* LaunchScreen.storyboard */,
-				AACAE97F1EDF3DB000065D9F /* Info.plist */,
+				AACAE9AD1EDF428D00065D9F /* AppDelegate.swift */,
+				AACAE9AF1EDF428D00065D9F /* MasterViewController.swift */,
+				AACAE9B11EDF428D00065D9F /* DetailViewController.swift */,
+				AACAE9B31EDF428D00065D9F /* Main.storyboard */,
+				AACAE9B61EDF428D00065D9F /* Assets.xcassets */,
+				AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */,
+				AACAE9BB1EDF428D00065D9F /* Info.plist */,
 			);
 			path = Lido;
-			sourceTree = "<group>";
-		};
-		AACAE9871EDF3DB000065D9F /* LidoTests */ = {
-			isa = PBXGroup;
-			children = (
-				AACAE9881EDF3DB000065D9F /* LidoTests.swift */,
-				AACAE98A1EDF3DB000065D9F /* Info.plist */,
-			);
-			path = LidoTests;
-			sourceTree = "<group>";
-		};
-		AACAE9921EDF3DB000065D9F /* LidoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AACAE9931EDF3DB000065D9F /* LidoUITests.swift */,
-				AACAE9951EDF3DB000065D9F /* Info.plist */,
-			);
-			path = LidoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AACAE96D1EDF3DAF00065D9F /* Lido */ = {
+		AACAE9A91EDF428D00065D9F /* Lido */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AACAE9981EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "Lido" */;
+			buildConfigurationList = AACAE9BE1EDF428D00065D9F /* Build configuration list for PBXNativeTarget "Lido" */;
 			buildPhases = (
-				AACAE96A1EDF3DAF00065D9F /* Sources */,
-				AACAE96B1EDF3DAF00065D9F /* Frameworks */,
-				AACAE96C1EDF3DAF00065D9F /* Resources */,
+				AACAE9A61EDF428D00065D9F /* Sources */,
+				AACAE9A71EDF428D00065D9F /* Frameworks */,
+				AACAE9A81EDF428D00065D9F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,75 +84,27 @@
 			);
 			name = Lido;
 			productName = Lido;
-			productReference = AACAE96E1EDF3DAF00065D9F /* Lido.app */;
+			productReference = AACAE9AA1EDF428D00065D9F /* Lido.app */;
 			productType = "com.apple.product-type.application";
-		};
-		AACAE9831EDF3DB000065D9F /* LidoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AACAE99B1EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "LidoTests" */;
-			buildPhases = (
-				AACAE9801EDF3DB000065D9F /* Sources */,
-				AACAE9811EDF3DB000065D9F /* Frameworks */,
-				AACAE9821EDF3DB000065D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AACAE9861EDF3DB000065D9F /* PBXTargetDependency */,
-			);
-			name = LidoTests;
-			productName = LidoTests;
-			productReference = AACAE9841EDF3DB000065D9F /* LidoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AACAE98E1EDF3DB000065D9F /* LidoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AACAE99E1EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "LidoUITests" */;
-			buildPhases = (
-				AACAE98B1EDF3DB000065D9F /* Sources */,
-				AACAE98C1EDF3DB000065D9F /* Frameworks */,
-				AACAE98D1EDF3DB000065D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AACAE9911EDF3DB000065D9F /* PBXTargetDependency */,
-			);
-			name = LidoUITests;
-			productName = LidoUITests;
-			productReference = AACAE98F1EDF3DB000065D9F /* LidoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AACAE9661EDF3DAF00065D9F /* Project object */ = {
+		AACAE9A21EDF428D00065D9F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Steve Davis";
 				TargetAttributes = {
-					AACAE96D1EDF3DAF00065D9F = {
+					AACAE9A91EDF428D00065D9F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = N3S9F8484Z;
 						ProvisioningStyle = Automatic;
-					};
-					AACAE9831EDF3DB000065D9F = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = N3S9F8484Z;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AACAE96D1EDF3DAF00065D9F;
-					};
-					AACAE98E1EDF3DB000065D9F = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = N3S9F8484Z;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AACAE96D1EDF3DAF00065D9F;
 					};
 				};
 			};
-			buildConfigurationList = AACAE9691EDF3DAF00065D9F /* Build configuration list for PBXProject "Lido" */;
+			buildConfigurationList = AACAE9A51EDF428D00065D9F /* Build configuration list for PBXProject "Lido" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,100 +112,55 @@
 				en,
 				Base,
 			);
-			mainGroup = AACAE9651EDF3DAF00065D9F;
-			productRefGroup = AACAE96F1EDF3DAF00065D9F /* Products */;
+			mainGroup = AACAE9A11EDF428D00065D9F;
+			productRefGroup = AACAE9AB1EDF428D00065D9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AACAE96D1EDF3DAF00065D9F /* Lido */,
-				AACAE9831EDF3DB000065D9F /* LidoTests */,
-				AACAE98E1EDF3DB000065D9F /* LidoUITests */,
+				AACAE9A91EDF428D00065D9F /* Lido */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AACAE96C1EDF3DAF00065D9F /* Resources */ = {
+		AACAE9A81EDF428D00065D9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AACAE97E1EDF3DB000065D9F /* LaunchScreen.storyboard in Resources */,
-				AACAE97B1EDF3DB000065D9F /* Assets.xcassets in Resources */,
-				AACAE9791EDF3DB000065D9F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE9821EDF3DB000065D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE98D1EDF3DB000065D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AACAE9BA1EDF428D00065D9F /* LaunchScreen.storyboard in Resources */,
+				AACAE9B71EDF428D00065D9F /* Assets.xcassets in Resources */,
+				AACAE9B51EDF428D00065D9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AACAE96A1EDF3DAF00065D9F /* Sources */ = {
+		AACAE9A61EDF428D00065D9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AACAE9761EDF3DB000065D9F /* DetailViewController.swift in Sources */,
-				AACAE9741EDF3DB000065D9F /* MasterViewController.swift in Sources */,
-				AACAE9721EDF3DAF00065D9F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE9801EDF3DB000065D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AACAE9891EDF3DB000065D9F /* LidoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AACAE98B1EDF3DB000065D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AACAE9941EDF3DB000065D9F /* LidoUITests.swift in Sources */,
+				AACAE9B21EDF428D00065D9F /* DetailViewController.swift in Sources */,
+				AACAE9B01EDF428D00065D9F /* MasterViewController.swift in Sources */,
+				AACAE9AE1EDF428D00065D9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		AACAE9861EDF3DB000065D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AACAE96D1EDF3DAF00065D9F /* Lido */;
-			targetProxy = AACAE9851EDF3DB000065D9F /* PBXContainerItemProxy */;
-		};
-		AACAE9911EDF3DB000065D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AACAE96D1EDF3DAF00065D9F /* Lido */;
-			targetProxy = AACAE9901EDF3DB000065D9F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		AACAE9771EDF3DB000065D9F /* Main.storyboard */ = {
+		AACAE9B31EDF428D00065D9F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AACAE9781EDF3DB000065D9F /* Base */,
+				AACAE9B41EDF428D00065D9F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AACAE97C1EDF3DB000065D9F /* LaunchScreen.storyboard */ = {
+		AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AACAE97D1EDF3DB000065D9F /* Base */,
+				AACAE9B91EDF428D00065D9F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,7 +168,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AACAE9961EDF3DB000065D9F /* Debug */ = {
+		AACAE9BC1EDF428D00065D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,7 +219,7 @@
 			};
 			name = Debug;
 		};
-		AACAE9971EDF3DB000065D9F /* Release */ = {
+		AACAE9BD1EDF428D00065D9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -417,7 +263,7 @@
 			};
 			name = Release;
 		};
-		AACAE9991EDF3DB000065D9F /* Debug */ = {
+		AACAE9BF1EDF428D00065D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -430,7 +276,7 @@
 			};
 			name = Debug;
 		};
-		AACAE99A1EDF3DB000065D9F /* Release */ = {
+		AACAE9C01EDF428D00065D9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -440,104 +286,30 @@
 				PRODUCT_BUNDLE_IDENTIFIER = club.celery.Lido;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		AACAE99C1EDF3DB000065D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = N3S9F8484Z;
-				INFOPLIST_FILE = LidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = club.celery.LidoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lido.app/Lido";
-			};
-			name = Debug;
-		};
-		AACAE99D1EDF3DB000065D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = N3S9F8484Z;
-				INFOPLIST_FILE = LidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = club.celery.LidoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lido.app/Lido";
-			};
-			name = Release;
-		};
-		AACAE99F1EDF3DB000065D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = N3S9F8484Z;
-				INFOPLIST_FILE = LidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = club.celery.LidoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Lido;
-			};
-			name = Debug;
-		};
-		AACAE9A01EDF3DB000065D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = N3S9F8484Z;
-				INFOPLIST_FILE = LidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = club.celery.LidoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Lido;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AACAE9691EDF3DAF00065D9F /* Build configuration list for PBXProject "Lido" */ = {
+		AACAE9A51EDF428D00065D9F /* Build configuration list for PBXProject "Lido" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AACAE9961EDF3DB000065D9F /* Debug */,
-				AACAE9971EDF3DB000065D9F /* Release */,
+				AACAE9BC1EDF428D00065D9F /* Debug */,
+				AACAE9BD1EDF428D00065D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AACAE9981EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "Lido" */ = {
+		AACAE9BE1EDF428D00065D9F /* Build configuration list for PBXNativeTarget "Lido" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AACAE9991EDF3DB000065D9F /* Debug */,
-				AACAE99A1EDF3DB000065D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		AACAE99B1EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "LidoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AACAE99C1EDF3DB000065D9F /* Debug */,
-				AACAE99D1EDF3DB000065D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		AACAE99E1EDF3DB000065D9F /* Build configuration list for PBXNativeTarget "LidoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AACAE99F1EDF3DB000065D9F /* Debug */,
-				AACAE9A01EDF3DB000065D9F /* Release */,
+				AACAE9BF1EDF428D00065D9F /* Debug */,
+				AACAE9C01EDF428D00065D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AACAE9661EDF3DAF00065D9F /* Project object */;
+	rootObject = AACAE9A21EDF428D00065D9F /* Project object */;
 }
