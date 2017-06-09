@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailViewController: UIViewController {
+  var index: Int?
 
   @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
   func configureView() {
+    print("http://staging.lido.celery.club/notes/\(self.index!)")
+
+    Alamofire.request("http://staging.lido.celery.club/notes/\(self.index!)").responseJSON { response in
+      if let value = response.result.value as? [String: Any]{
+        let note = Note.init(dict: value)
+        print(note.description())
+      }
+      else {
+        print(response.error!)
+      }
+    }
+
     // Update the user interface for the detail item.
     if let detail = detailItem {
-        if let label = detailDescriptionLabel {
-            label.text = detail.description
-        }
+      if let label = detailDescriptionLabel {
+        label.text = detail.description
+      }
     }
   }
 
@@ -35,11 +48,9 @@ class DetailViewController: UIViewController {
 
   var detailItem: NSDate? {
     didSet {
-        // Update the view.
-        configureView()
+      // Update the view.
+      configureView()
     }
   }
-
-
 }
 

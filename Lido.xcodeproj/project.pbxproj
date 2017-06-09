@@ -14,6 +14,7 @@
 		AACAE9B71EDF428D00065D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B61EDF428D00065D9F /* Assets.xcassets */; };
 		AACAE9BA1EDF428D00065D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */; };
 		AACAE9C31EDF437500065D9F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACAE9C21EDF437500065D9F /* Alamofire.framework */; };
+		AADFAE771EE79314005DD262 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFAE761EE79314005DD262 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AACAE9B91EDF428D00065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AACAE9BB1EDF428D00065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACAE9C21EDF437500065D9F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AADFAE761EE79314005DD262 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Lido/Models/Note.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AACAE9AD1EDF428D00065D9F /* AppDelegate.swift */,
+				AADFAE781EE7931D005DD262 /* Models */,
 				AA5B0EE41EE0BE2F00B1C7C5 /* View Controllers */,
 				AA5B0EEA1EE0C51F00B1C7C5 /* Storyboards */,
 				AA5B0EE91EE0C4FB00B1C7C5 /* Supporting Files */,
@@ -101,6 +104,15 @@
 				AACAE9C21EDF437500065D9F /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AADFAE781EE7931D005DD262 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AADFAE761EE79314005DD262 /* Note.swift */,
+			);
+			name = Models;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +209,7 @@
 				AACAE9AE1EDF428D00065D9F /* AppDelegate.swift in Sources */,
 				AA5B0EE71EE0BE2F00B1C7C5 /* DetailViewController.swift in Sources */,
 				AA5B0EE81EE0BE2F00B1C7C5 /* MasterViewController.swift in Sources */,
+				AADFAE771EE79314005DD262 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
