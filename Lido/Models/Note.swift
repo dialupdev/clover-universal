@@ -44,13 +44,12 @@ class Note {
 
   class func find(id: Int) -> Note? {
     Alamofire.request("http://staging.lido.celery.club/notes/\(id)").responseJSON { response in
-      if let value = response.result.value as? [String: Any] {
-        let note = Note(dict: value)
-        return note
-      }
-      else {
+      guard let value = response.result.value as? [String: Any] else {
         return nil
       }
+      
+      let note = Note(dict: value)
+      return note
     }
   }
 
