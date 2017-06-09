@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Note {
   var id: Int?
@@ -14,7 +15,7 @@ class Note {
   var body: String?
   var createdAt: Date?
   var updatedAt: Date?
-  
+
   init(id: Int, title: String, body: String, createdAt: Date, updatedAt: Date) {
     self.id = id
     self.title = title
@@ -29,7 +30,7 @@ class Note {
     self.body = dict["body"] as? String
 
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"//this your string date format
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
 
     if let createdAt = dict["created_at"] as? String {
@@ -38,6 +39,18 @@ class Note {
 
     if let updatedAt = dict["updated_at"] as? String {
       self.updatedAt = dateFormatter.date(from: updatedAt)
+    }
+  }
+
+  class func find(id: Int) -> Note? {
+    Alamofire.request("http://staging.lido.celery.club/notes/\(id)").responseJSON { response in
+      if let value = response.result.value as? [String: Any] {
+        let note = Note(dict: value)
+        return note
+      }
+      else {
+        return nil
+      }
     }
   }
 

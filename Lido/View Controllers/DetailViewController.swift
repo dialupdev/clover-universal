@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class DetailViewController: UIViewController {
   var index: Int?
@@ -15,16 +14,11 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var detailDescriptionLabel: UILabel!
 
   func configureView() {
-    print("http://staging.lido.celery.club/notes/\(self.index!)")
-
-    Alamofire.request("http://staging.lido.celery.club/notes/\(self.index!)").responseJSON { response in
-      if let value = response.result.value as? [String: Any]{
-        let note = Note(dict: value)
-        print(note.description())
-      }
-      else {
-        print(response.error!)
-      }
+    if let note = Note.find(id: self.index!) {
+      print(note.description())
+    }
+    else {
+      print("Unable to find note #\(self.index!)")
     }
 
     // Update the user interface for the detail item.
