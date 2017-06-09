@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
 
     Alamofire.request("http://staging.lido.celery.club/notes/\(self.index!)").responseJSON { response in
       if let value = response.result.value as? [String: Any]{
-        let note = Note.init(dict: value)
+        let note = Note(dict: value)
         print(note.description())
       }
       else {
