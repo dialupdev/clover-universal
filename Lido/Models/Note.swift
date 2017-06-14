@@ -42,14 +42,16 @@ class Note {
     }
   }
 
-  class func find(id: Int) -> Note? {
-    Alamofire.request("http://staging.lido.celery.club/notes/\(id)").responseJSON { response in
-      guard let value = response.result.value as? [String: Any] else {
-        return nil
+  class func find(id: Int, handler: @escaping (Note?) -> ()) {
+    print("\(self.endpoint)/\(id)")
+    Alamofire.request("\(self.endpoint)/\(id)").responseJSON { response in
+      if let value = response.result.value as? [String: Any] {
+        let note = Note(dict: value)
+        handler(note)
       }
-      
-      let note = Note(dict: value)
-      return note
+      else {
+        handler(nil)
+      }
     }
   }
 

@@ -14,11 +14,13 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var detailDescriptionLabel: UILabel!
 
   func configureView() {
-    if let note = Note.find(id: self.index!) {
-      print(note.description())
-    }
-    else {
-      print("Unable to find note #\(self.index!)")
+    Note.find(id: self.index!) { result in
+      if let note = result {
+        print(note.description())
+      }
+      else {
+        print("error")
+      }
     }
 
     // Update the user interface for the detail item.
