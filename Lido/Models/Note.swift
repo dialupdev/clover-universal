@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 
 class Note {
+  static let endpoint = "http://staging.lido.celery.club/notes"
+
   var id: Int?
   var title: String?
   var body: String?
@@ -39,6 +41,23 @@ class Note {
 
     if let updatedAt = dict["updated_at"] as? String {
       self.updatedAt = dateFormatter.date(from: updatedAt)
+    }
+  }
+
+  class func all(handler: @escaping ([Note]) -> ()) {
+    Alamofire.request(self.endpoint).responseJSON { response in
+      if let values = response.result.value as? [[String: Any]] {
+        var notes = [Note]()
+
+        for value in values {
+          notes.append(Note(dict: value))
+        }
+
+        handler(notes)
+      }
+      else {
+        handler([])
+      }
     }
   }
 
