@@ -18,6 +18,16 @@ class DetailViewController: UIViewController {
     }
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    loadNote()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
   func loadNote() {
     if let loader = self.detailLoader {
       loader.startAnimating()
@@ -39,15 +49,5 @@ class DetailViewController: UIViewController {
         print("error")
       }
     }
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    loadNote()
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 }
