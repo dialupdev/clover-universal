@@ -22,10 +22,7 @@ class MasterViewController: UITableViewController {
       detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
     }
 
-    Note.all() { result in
-      self.notes = result
-      self.tableView.reloadData()
-    }
+    loadNotes()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -73,5 +70,14 @@ class MasterViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
     // Return false if you do not want the specified item to be editable.
     return true
+  }
+
+  func loadNotes() {
+    Note.all() { result in
+      self.notes = result
+
+      self.tableView.reloadData()
+      self.refreshControl?.endRefreshing()
+    }
   }
 }
