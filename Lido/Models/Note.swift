@@ -47,10 +47,8 @@ class Note {
   class func all(handler: @escaping ([Note]) -> ()) {
     Alamofire.request(self.endpoint).responseJSON { response in
       if let values = response.result.value as? [[String: Any]] {
-        var notes = [Note]()
-
-        for value in values {
-          notes.append(Note(dict: value))
+        let notes: [Note] = values.map { value in
+          return Note(dict: value)
         }
 
         handler(notes)
