@@ -14,8 +14,10 @@ class MasterViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
     navigationItem.leftBarButtonItem = editButtonItem
+
+    self.refreshControl?.addTarget(self, action: #selector(self.loadNotes), for: UIControlEvents.valueChanged)
 
     if let split = splitViewController {
       let controllers = split.viewControllers
