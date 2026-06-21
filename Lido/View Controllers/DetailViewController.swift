@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarkdownTextView
 
 class DetailViewController: UIViewController {
   @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -17,10 +18,34 @@ class DetailViewController: UIViewController {
       loadNote()
     }
   }
+  
+  var textView: MarkdownTextView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     loadNote()
+    
+    let attributes = MarkdownAttributes()
+    let textStorage = MarkdownTextStorage(attributes: attributes)
+    do {
+      textStorage.addHighlighter(try LinkHighlighter())
+    } catch let error {
+      fatalError("Error initializing LinkHighlighter: \(error)")
+    }
+    textStorage.addHighlighter(MarkdownStrikethroughHighlighter())
+    textStorage.addHighlighter(MarkdownSuperscriptHighlighter())
+    if let codeBlockAttributes = attributes.codeBlockAttributes {
+      textStorage.addHighlighter(MarkdownFencedCodeHighlighter(attributes: codeBlockAttributes))
+    }
+    
+    textView = MarkdownTextView(frame: CGRect.zero, textStorage: textStorage)
+    textView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(textView)
+    
+    let views: [String : Any] = ["textView": textView]
+    var constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[textView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[textView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+    NSLayoutConstraint.activate(constraints)
   }
 
   override func didReceiveMemoryWarning() {

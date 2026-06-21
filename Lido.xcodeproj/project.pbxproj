@@ -15,6 +15,7 @@
 		AACAE9BA1EDF428D00065D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */; };
 		AACAE9C31EDF437500065D9F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACAE9C21EDF437500065D9F /* Alamofire.framework */; };
 		AADFAE771EE79314005DD262 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFAE761EE79314005DD262 /* Note.swift */; };
+		AAF7617D1EF487EA000DB681 /* MarkdownTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AACAE9BB1EDF428D00065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACAE9C21EDF437500065D9F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		AADFAE761EE79314005DD262 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Lido/Models/Note.swift; sourceTree = SOURCE_ROOT; };
+		AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownTextView.framework; path = Carthage/Build/iOS/MarkdownTextView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACAE9C31EDF437500065D9F /* Alamofire.framework in Frameworks */,
+				AAF7617D1EF487EA000DB681 /* MarkdownTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				AACAE9C21EDF437500065D9F /* Alamofire.framework */,
+				AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MarkdownTextView.framework",
 			);
 			outputPaths = (
 			);

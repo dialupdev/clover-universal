@@ -9,6 +9,13 @@
 import Foundation
 import Alamofire
 
+//class Promise<T> {
+//  // the monadic equivalent of "map", which is usually called "then" in the Promise type
+//  func then(f: T->U) -> Promise<U>
+//  // the monadic equivalent of "flatMap", which is usually called "then" too
+//  func then(f: T->Promise<U>) -> Promise<U>
+//}
+
 class Note {
   static let endpoint = "http://staging.lido.celery.club/notes"
 
