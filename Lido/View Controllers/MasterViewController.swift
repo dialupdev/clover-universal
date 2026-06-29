@@ -9,7 +9,7 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-  var detailViewController: DetailViewController? = nil
+  var detailViewController: DetailViewController?
   var notes = [Note]()
 
   override func viewDidLoad() {
@@ -17,14 +17,11 @@ class MasterViewController: UITableViewController {
 
     navigationItem.leftBarButtonItem = editButtonItem
 
-    self.refreshControl?.addTarget(self, action: #selector(self.loadNotes), for: UIControlEvents.valueChanged)
-
-//    let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-//    navigationItem.rightBarButtonItem = addButton
+    refreshControl?.addTarget(self, action: #selector(loadNotes), for: .valueChanged)
 
     if let split = splitViewController {
       let controllers = split.viewControllers
-      detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+      detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
     }
 
     loadNotes()
@@ -34,17 +31,6 @@ class MasterViewController: UITableViewController {
     clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
     super.viewWillAppear(animated)
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-//  func insertNewObject(_ sender: Any) {
-//    notes.insert(NSDate(), at: 0)
-//    let indexPath = IndexPath(row: 0, section: 0)
-//    tableView.insertRows(at: [indexPath], with: .automatic)
-//  }
 
   // MARK: - Segues
 
@@ -74,29 +60,17 @@ class MasterViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
     let object = notes[indexPath.row]
-    cell.textLabel!.text = object.title
+    cell.textLabel?.text = object.title
     return cell
   }
 
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
     return true
   }
 
-//  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//    if editingStyle == .delete {
-//      notes.remove(at: indexPath.row)
-//      tableView.deleteRows(at: [indexPath], with: .fade)
-//    }
-//    else if editingStyle == .insert {
-//      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//    }
-//  }
-
-  func loadNotes() {
-    Note.all() { result in
+  @objc func loadNotes() {
+    Note.all { result in
       self.notes = result
-
       self.tableView.reloadData()
       self.refreshControl?.endRefreshing()
     }

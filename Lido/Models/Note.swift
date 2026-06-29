@@ -32,7 +32,7 @@ class Note {
 
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
+    dateFormatter.timeZone = TimeZone(identifier: "UTC")
 
     if let createdAt = dict["created_at"] as? String {
       self.createdAt = dateFormatter.date(from: createdAt)
@@ -85,7 +85,7 @@ class Note {
     }.resume()
   }
 
-  func description() -> String {
-    return String.init(format: "(%d) [%@]: %@", self.id!, self.title!, self.body!)
+  func summary() -> String {
+    return String(format: "(%d) [%@]: %@", id ?? 0, title ?? "", body ?? "")
   }
 }
