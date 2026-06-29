@@ -7,14 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-
-//class Promise<T> {
-//  // the monadic equivalent of "map", which is usually called "then" in the Promise type
-//  func then(f: T->U) -> Promise<U>
-//  // the monadic equivalent of "flatMap", which is usually called "then" too
-//  func then(f: T->Promise<U>) -> Promise<U>
-//}
 
 class Note {
   static let endpoint = "http://staging.lido.celery.club/notes"
@@ -51,32 +43,46 @@ class Note {
     }
   }
 
-  class func all(handler: @escaping ([Note]) -> ()) {
-    Alamofire.request(self.endpoint).responseJSON { response in
-      if let values = response.result.value as? [[String: Any]] {
-        let notes: [Note] = values.map { value in
-          return Note(dict: value)
-        }
+  class func all(handler: @escaping ([Note]) -> Void) {
+    guard let url = URL(string: endpoint) else {
+      handler([])
+      return
+    }
 
+    URLSession.shared.dataTask(with: url) { data, _, _ in
+      let notes: [Note]
+      if let data = data,
+         let values = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
+        notes = values.map { Note(dict: $0) }
+      } else {
+        notes = []
+      }
+
+      DispatchQueue.main.async {
         handler(notes)
       }
-      else {
-        handler([])
-      }
-    }
+    }.resume()
   }
 
-  class func find(id: Int, handler: @escaping (Note?) -> ()) {
-    print("\(self.endpoint)/\(id)")
-    Alamofire.request("\(self.endpoint)/\(id)").responseJSON { response in
-      if let value = response.result.value as? [String: Any] {
-        let note = Note(dict: value)
+  class func find(id: Int, handler: @escaping (Note?) -> Void) {
+    guard let url = URL(string: "\(endpoint)/\(id)") else {
+      handler(nil)
+      return
+    }
+
+    URLSession.shared.dataTask(with: url) { data, _, _ in
+      let note: Note?
+      if let data = data,
+         let value = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+        note = Note(dict: value)
+      } else {
+        note = nil
+      }
+
+      DispatchQueue.main.async {
         handler(note)
       }
-      else {
-        handler(nil)
-      }
-    }
+    }.resume()
   }
 
   func description() -> String {

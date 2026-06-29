@@ -13,7 +13,6 @@
 		AACAE9B51EDF428D00065D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B31EDF428D00065D9F /* Main.storyboard */; };
 		AACAE9B71EDF428D00065D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B61EDF428D00065D9F /* Assets.xcassets */; };
 		AACAE9BA1EDF428D00065D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACAE9B81EDF428D00065D9F /* LaunchScreen.storyboard */; };
-		AACAE9C31EDF437500065D9F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACAE9C21EDF437500065D9F /* Alamofire.framework */; };
 		AADFAE771EE79314005DD262 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFAE761EE79314005DD262 /* Note.swift */; };
 		AAF7617D1EF487EA000DB681 /* MarkdownTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		AACAE9B61EDF428D00065D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AACAE9B91EDF428D00065D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AACAE9BB1EDF428D00065D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AACAE9C21EDF437500065D9F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		AADFAE761EE79314005DD262 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Lido/Models/Note.swift; sourceTree = SOURCE_ROOT; };
 		AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownTextView.framework; path = Carthage/Build/iOS/MarkdownTextView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AACAE9C31EDF437500065D9F /* Alamofire.framework in Frameworks */,
 				AAF7617D1EF487EA000DB681 /* MarkdownTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +74,6 @@
 			children = (
 				AACAE9AC1EDF428D00065D9F /* Lido */,
 				AACAE9AB1EDF428D00065D9F /* Products */,
-				AACAE9C11EDF437500065D9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +100,6 @@
 		AACAE9C11EDF437500065D9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AACAE9C21EDF437500065D9F /* Alamofire.framework */,
 				AAF7617C1EF487EA000DB681 /* MarkdownTextView.framework */,
 			);
 			name = Frameworks;
@@ -129,7 +124,6 @@
 				AACAE9A61EDF428D00065D9F /* Sources */,
 				AACAE9A71EDF428D00065D9F /* Frameworks */,
 				AACAE9A81EDF428D00065D9F /* Resources */,
-				AACAE9C41EDF438800065D9F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -195,7 +189,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MarkdownTextView.framework",
 			);
 			outputPaths = (
