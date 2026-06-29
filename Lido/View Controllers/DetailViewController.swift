@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MarkdownTextView
 
 class DetailViewController: UIViewController {
   @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -18,61 +17,52 @@ class DetailViewController: UIViewController {
       loadNote()
     }
   }
-  
-  var textView: MarkdownTextView!
+
+  private let textView = UITextView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    loadNote()
-    
-    let attributes = MarkdownAttributes()
-    let textStorage = MarkdownTextStorage(attributes: attributes)
-    do {
-      textStorage.addHighlighter(try LinkHighlighter())
-    } catch let error {
-      fatalError("Error initializing LinkHighlighter: \(error)")
-    }
-    textStorage.addHighlighter(MarkdownStrikethroughHighlighter())
-    textStorage.addHighlighter(MarkdownSuperscriptHighlighter())
-    if let codeBlockAttributes = attributes.codeBlockAttributes {
-      textStorage.addHighlighter(MarkdownFencedCodeHighlighter(attributes: codeBlockAttributes))
-    }
-    
-    textView = MarkdownTextView(frame: CGRect.zero, textStorage: textStorage)
-    textView.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(textView)
-    
-    let views: [String : Any] = ["textView": textView]
-    var constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[textView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[textView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-    NSLayoutConstraint.activate(constraints)
-  }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+    textView.translatesAutoresizingMaskIntoConstraints = false
+    textView.isEditable = false
+    textView.font = .preferredFont(forTextStyle: .body)
+    view.addSubview(textView)
+
+    NSLayoutConstraint.activate([
+      textView.topAnchor.constraint(equalTo: view.topAnchor),
+      textView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      textView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      textView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+    ])
+
+    loadNote()
   }
 
   func loadNote() {
-    if let loader = self.detailLoader {
-      loader.startAnimating()
-    }
+    guard let noteId = noteId else { return }
 
-    Note.find(id: self.noteId!) { result in
-      if let loader = self.detailLoader {
-        loader.stopAnimating()
-      }
+    detailLoader?.startAnimating()
+
+    Note.find(id: noteId) { [weak self] result in
+      guard let self = self else { return }
+      self.detailLoader?.stopAnimating()
 
       if let note = result {
-        print(note.description())
-
-        if let label = self.detailDescriptionLabel {
-          label.text = note.description()
-        }
-      }
-      else {
-        print("error")
+        self.detailDescriptionLabel?.text = note.summary()
+        self.textView.attributedText = Self.attributedBody(from: note.body)
       }
     }
+  }
+
+  private static func attributedBody(from body: String?) -> NSAttributedString {
+    guard let body = body, !body.isEmpty else {
+      return NSAttributedString(string: "")
+    }
+
+    if let attributed = try? NSAttributedString(markdown: body) {
+      return attributed
+    }
+
+    return NSAttributedString(string: body)
   }
 }
